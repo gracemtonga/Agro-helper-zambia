@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Agro helper Zambia</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Agro Helper Zambia - Weather</title>
+
+</head>
+
+<body>
+
+  <h1>Agro Helper Zambia</h1>
+
+  <nav>
+
+    <button onclick="showSection('weather')">Weather</button>
+
+  </nav>
+
+  <!-- Weather Section -->
+
+  <section id="weather" class="section">
+
+    <h2>Weather Forecast</h2>
+
+    <input type="text" id="cityInput" placeholder="Enter city name" />
+
+    <button onclick="getWeather()">Get Weather</button>
+
+    <div id="weatherResult"></div>
+
+    <div id="forecastResult"></div>
+
+  </section>
+
+</body>
+
+</html><!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Agro Helper Zambia - Market Prices</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+  <h1>Agro Helper Zambia - Market Prices</h1>
+
+  <!-- Market Price Table -->
+
+  <section>
+
+    <h2>Current Crop Prices</h2>
+
+    <select id="marketSelect">
+
+      <option value="Lusaka - Soweto">Lusaka - Soweto</option>
+
+      <option value="Lusaka - Chilenje">Lusaka - Chilenje</option>
+
+      <option value="Lusaka - Matero">Lusaka - Matero</option>
+
+      <option value="Lusaka - Mtendere">Lusaka - Mtendere</option>
+
+      <option value="Lusaka - Chelstone">Lusaka - Chelstone</option>
+
+      <option value="Kitwe">Kitwe</option>
+
+      <option value="Ndola">Ndola</option>
+
+      <option value="Kasama">Kasama</option>
+
+    </select>
+
+    <table id="priceTable">
+
+      <thead>
+
+        <tr>
+
+          <th>Crop</th>
+
+          <th>Price (ZMW/50kg)</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody id="priceBody">
+
+        <!-- Prices inserted by JavaScript -->
+
+      </tbody>
+
+    </table>
+
+  </section>
+
+  <hr>
+
+  <!-- Sell Crops Form -->
+
+  <section>
+
+    <h2>Sell Your Crops</h2>
+
+    <form id="sellForm">
+
+      <input type="text" id="sellerName" placeholder="Your Name" required><br>
+
+      <input type="text" id="cropName" placeholder="Crop Name" required><br>
+
+      <input type="number" id="quantity" placeholder="Quantity (kg)" required><br>
+
+      <input type="number" id="price" placeholder="Price per kg (ZMW)" required><br>
+
+      <input type="text" id="location" placeholder="Market (e.g. Soweto)" required><br>
+
+      <button type="submit">Submit for Sale</button>
+
+    </form>
+
+  </section>
+
+  <hr>
+
+  <!-- Buy Crops Section -->
+
+  <section>
+
+    <h2>Crops for Sale</h2>
+
+    <ul id="buyList">
+
+      <!-- Buy listings loaded from Firebase -->
+
+    </ul>
+
+  </section>
+
+</body>
+
+</html><section id="farm-records">
+
+  <h2>Farm Records</h2>
+
+  <form id="farmRecordForm">
+
+    <input type="text" id="activity" placeholder="Activity (e.g. Planting maize)" required>
+
+    <input type="date" id="date" required>
+
+    <textarea id="notes" placeholder="Notes (e.g. Weather was dry, used D-compound fertilizer)" rows="4"></textarea>
+
+    <button type="submit">Save Record</button>
+
+  </form>
+
+  <h3>Previous Records</h3>
+
+  <ul id="recordList"></ul>
+
+</section>
+<!-- partial -->
+  <script src='https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js'></script>
+<script src='https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
